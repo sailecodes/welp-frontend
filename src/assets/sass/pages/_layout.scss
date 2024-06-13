@@ -1,0 +1,49 @@
+.layout {
+  display: grid;
+  place-items: center;
+
+  height: 100vh;
+}
+
+.layout--main {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  grid-template-rows: 8rem 1fr;
+
+  width: 60rem;
+  height: 60rem;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.layout--main-logo {
+  align-self: center;
+
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+
+  padding-left: 2rem;
+  border: 1px solid red;
+}
+
+.layout--main-nav {
+  grid-row: 2 / -1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  font-size: 1.4rem;
+
+  padding: 2rem 0 2rem 2rem;
+  border: 1px solid red;
+  border-radius: 0 0 0 10px;
+}
+
+.layout--main-nav > button {
+  text-align: left;
+
+  margin-top: auto;
+}
