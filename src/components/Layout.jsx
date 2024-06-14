@@ -1,5 +1,6 @@
-import { NavLink, Outlet } from "react-router-dom";
-import { CiSearch } from "react-icons/ci";
+import { Link, Outlet } from "react-router-dom";
+import { CiLogout, CiSearch, CiForkAndKnife, CiStar } from "react-icons/ci";
+import LayoutMainNavLink from "./LayoutMainNavLink";
 
 const Layout = () => {
   const handleSearch = (e) => {
@@ -13,7 +14,11 @@ const Layout = () => {
   return (
     <div className="layout">
       <div className="layout--main">
-        <p className="layout--main-logo">welp</p>
+        <Link
+          to="/"
+          className="layout--main-logo">
+          welp.
+        </Link>
         <form
           className="layout--main-search-form"
           onSubmit={handleSearch}>
@@ -27,21 +32,21 @@ const Layout = () => {
           </button>
         </form>
         <nav className="layout--main-nav">
-          <LayoutMainNavLink linkText="Restaurants" />
-          <LayoutMainNavLink linkText="Favorites" />
-          <button onClick={handleLogout}>Logout</button>
+          <LayoutMainNavLink
+            linkText="Restaurants"
+            linkIcon={<CiForkAndKnife />}
+          />
+          <LayoutMainNavLink
+            linkText="Favorites"
+            linkIcon={<CiStar />}
+          />
+          <button onClick={handleLogout}>
+            <CiLogout />
+            Logout
+          </button>
         </nav>
         <Outlet />
       </div>
-    </div>
-  );
-};
-
-const LayoutMainNavLink = ({ linkText }) => {
-  return (
-    <div className="layout-main-nav-link">
-      <NavLink to={linkText.toLowerCase()}>{linkText}</NavLink>
-      <div />
     </div>
   );
 };
