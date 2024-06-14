@@ -8,7 +8,7 @@
 .layout--main {
   display: grid;
   grid-template-columns: 12rem 1fr;
-  grid-template-rows: 8rem 1fr;
+  grid-template-rows: 7rem 1fr;
 
   width: 60rem;
   height: 60rem;
@@ -26,6 +26,21 @@
 
   padding-left: 2rem;
   border: 1px solid red;
+}
+
+.layout--main-search {
+  grid-row: 1;
+  grid-column: 2;
+  align-self: center;
+  justify-self: flex-end;
+
+  height: 4rem;
+  width: 32rem;
+
+  padding: 0 2rem 0 2rem;
+  margin-right: 2rem;
+  border: 1px solid red;
+  border-radius: 8px;
 }
 
 .layout--main-nav {
@@ -49,5 +64,6 @@
 }
 
 .layout--main > main {
-  grid-row: 1 / -1;
+  grid-row: 2 / -1;
+  grid-column: 2;
 }

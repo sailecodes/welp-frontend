@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Layout from "./components/custom/Layout";
-import Default from "./components/pages/Default";
+import Layout from "./components/Layout";
+import Default from "./pages/Default";
 
 const router = createBrowserRouter([
   {

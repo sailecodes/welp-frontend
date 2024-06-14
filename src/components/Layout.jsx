@@ -9,6 +9,11 @@ const Layout = () => {
     <div className="layout">
       <div className="layout--main">
         <p className="layout--main-logo">Welp</p>
+        <input
+          className="layout--main-search"
+          type="search"
+          placeholder="Search for a business"
+        />
         <nav className="layout--main-nav">
           <Link to="">Restaurants</Link>
           <Link to="">Favorites</Link>
