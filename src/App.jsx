@@ -1,6 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout";
 import Default from "./pages/Default";
+import Restaurants from "./pages/Restaurants";
+import Favorites from "./pages/Favorites";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +12,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Default />,
+      },
+      {
+        path: "/restaurants",
+        element: <Restaurants />,
+      },
+      {
+        path: "/favorites",
+        element: <Favorites />,
       },
     ],
   },

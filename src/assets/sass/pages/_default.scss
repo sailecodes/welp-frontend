@@ -1,6 +1,10 @@
+@use "../base/variables" as vars;
+
 .default {
   display: grid;
   place-items: center;
+
+  color: vars.$color-black;
 
   font-size: 1.8rem;
 }
