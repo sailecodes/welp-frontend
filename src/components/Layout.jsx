@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { CiLogout, CiSearch, CiForkAndKnife, CiStar } from "react-icons/ci";
+import { CiLogout, CiSearch, CiForkAndKnife, CiBookmark } from "react-icons/ci";
 import LayoutMainNavLink from "./LayoutMainNavLink";
 
 const Layout = () => {
@@ -37,8 +37,8 @@ const Layout = () => {
             linkIcon={<CiForkAndKnife />}
           />
           <LayoutMainNavLink
-            linkText="Favorites"
-            linkIcon={<CiStar />}
+            linkText="Saved"
+            linkIcon={<CiBookmark />}
           />
           <button onClick={handleLogout}>
             <CiLogout />
