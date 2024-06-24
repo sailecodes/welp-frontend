@@ -1,8 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout";
-import Default from "./pages/Default";
-import Restaurants from "./pages/Restaurants";
-import Favorites from "./pages/Favorites";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -11,15 +9,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Default />,
-      },
-      {
-        path: "/restaurants",
-        element: <Restaurants />,
-      },
-      {
-        path: "/favorites",
-        element: <Favorites />,
+        element: <Home />,
       },
     ],
   },

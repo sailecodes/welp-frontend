@@ -1,116 +1,111 @@
 @use "../base/variables" as vars;
 
 .layout {
-  display: grid;
-  place-items: center;
+  background-color: black;
 
   height: 100vh;
 }
 
-.layout--main {
-  display: grid;
-  grid-template-columns: 18rem 1fr;
-  grid-template-rows: 7rem 1fr;
-
-  width: 70rem;
-  height: 65rem;
-
-  border: 1px solid vars.$color-border-red;
-  border-radius: 10px;
-}
-
-.layout--main-logo {
-  background-color: vars.$color-red;
-  color: vars.$color-white;
-
-  height: 100%;
-
-  font-size: 2.4rem;
-  font-weight: 600;
-  letter-spacing: -1.5px;
-
-  padding: 2rem 0 0 2rem;
-  border-radius: 10px 0 0 0;
-}
-
-.layout--main-search-form {
-  grid-row: 1;
-  grid-column: 2;
+.layout--nav {
+  position: sticky;
+  top: 0;
 
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 
-  padding: 2rem 2rem 0 0;
-  border-radius: 0 8px 0 0;
+  padding: 2rem 4rem;
+
+  border: 1px solid black;
 }
 
-.layout--main-search-form-input {
-  height: 4rem;
-  width: 32rem;
+.layout--nav-logo {
+  color: white;
 
-  font-size: 1.4rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
 
-  padding: 0 2rem 0 2rem;
-  border: 1px solid vars.$color-red;
-  border-right: none;
+.layout--nav-search {
+  display: flex;
+  align-items: center;
+}
+
+.layout--nav-search-input {
+  width: 40rem;
+  height: 5rem;
+
+  font-size: 1.6rem;
+
+  padding: 0 2rem;
   border-radius: 8px 0 0 8px;
 }
 
-.layout--main-search-form-btn {
+.layout--nav-search-btn {
   display: grid;
   place-items: center;
 
-  background-color: vars.$color-red;
+  width: 6rem;
+  height: 5rem;
 
-  height: 4rem;
-  width: 5rem;
+  background-color: red;
 
-  border: 1px solid vars.$color-red;
   border-radius: 0 8px 8px 0;
-
-  transition: 0.3s background-color ease-out;
 }
 
-.layout--main-search-form-btn:hover {
-  background-color: vars.$color-red-hover;
+.layout--nav-search-btn svg {
+  color: white;
+
+  font-size: 2.8rem;
 }
 
-.layout--main-search-form-btn > svg {
-  color: vars.$color-white;
-
-  font-size: 2.2rem;
-}
-
-.layout--main-nav {
-  grid-row: 2 / -1;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-
-  background-color: vars.$color-red;
-
-  padding: 2rem 0 2rem 2rem;
-  border-radius: 0 0 0 10px;
-}
-
-.layout--main-nav > button {
+.layout--btns {
   display: flex;
   align-items: center;
-  gap: 1rem;
-
-  color: vars.$color-white;
-
-  text-align: left;
-
-  margin-top: auto;
+  gap: 2rem;
 }
 
-.layout--main-nav > button > svg {
-  font-size: 2.2rem;
+.layout--btns-login,
+.layout--btns-signup {
+  color: white;
+
+  height: 5rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  padding: 0 2rem;
+  border-radius: 8px;
 }
 
-.layout--main > main {
-  grid-row: 2 / -1;
-  grid-column: 2;
+.layout--btns-login {
+  min-width: 8rem;
+
+  border: 2px solid white;
+
+  transition: background-color 0.3s;
+}
+
+.layout--btns-login:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.layout--btns-signup {
+  background-color: red;
+
+  min-width: 9rem;
+}
+
+.layout--footer {
+  display: grid;
+  place-items: center;
+
+  color: white;
+
+  height: 20rem;
+
+  font-size: 1.3rem;
+
+  border: 1px solid white;
 }

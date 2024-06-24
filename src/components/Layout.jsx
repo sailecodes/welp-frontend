@@ -1,52 +1,28 @@
-import { Link, Outlet } from "react-router-dom";
-import { CiLogout, CiSearch, CiForkAndKnife, CiBookmark } from "react-icons/ci";
-import LayoutMainNavLink from "./LayoutMainNavLink";
+import { Outlet } from "react-router-dom";
+import { CiSearch } from "react-icons/ci";
 
 const Layout = () => {
-  const handleSearch = (e) => {
-    e.preventDefault();
-  };
-
-  const handleLogout = (e) => {
+  const onSearch = (e) => {
     e.preventDefault();
   };
 
   return (
     <div className="layout">
-      <div className="layout--main">
-        <Link
-          to="/"
-          className="layout--main-logo">
-          welp.
-        </Link>
-        <form
-          className="layout--main-search-form"
-          onSubmit={handleSearch}>
-          <input
-            className="layout--main-search-form-input"
-            type="search"
-            placeholder="Search for a business"
-          />
-          <button className="layout--main-search-form-btn">
+      <nav className="layout--nav">
+        <p className="layout--nav-logo">welp.</p>
+        <form className="layout--nav-search" onSubmit={onSearch}>
+          <input className="layout--nav-search-input" type="text" placeholder="Search for restaurants..." />
+          <button className="layout--nav-search-btn">
             <CiSearch />
           </button>
         </form>
-        <nav className="layout--main-nav">
-          <LayoutMainNavLink
-            linkText="Restaurants"
-            linkIcon={<CiForkAndKnife />}
-          />
-          <LayoutMainNavLink
-            linkText="Saved"
-            linkIcon={<CiBookmark />}
-          />
-          <button onClick={handleLogout}>
-            <CiLogout />
-            Logout
-          </button>
-        </nav>
-        <Outlet />
-      </div>
+        <div className="layout--btns">
+          <button className="layout--btns-login">Log In</button>
+          <button className="layout--btns-signup">Sign Up</button>
+        </div>
+      </nav>
+      <Outlet />
+      <section className="layout--footer">Created by Elias IV Roman, inspired by Yelp.</section>
     </div>
   );
 };
