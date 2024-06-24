@@ -19,7 +19,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
 
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 // ==============================================
@@ -72,14 +72,14 @@ button:hover,
 // ===== SCROLL STYLINGS
 // ==============================================
 
-::-webkit-scrollbar {
-  width: 0.4rem;
-}
+// ::-webkit-scrollbar {
+//   width: 0.4rem;
+// }
 
-::-webkit-scrollbar-track {
-  // background-color: vars.$color-background;
-}
+// ::-webkit-scrollbar-track {
+//   // background-color: vars.$color-background;
+// }
 
-::-webkit-scrollbar-thumb {
-  // ...
-}
+// ::-webkit-scrollbar-thumb {
+//   // ...
+// }

@@ -2,27 +2,10 @@
 
 .layout {
   background-color: black;
-}
 
-.layout--auth {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 50;
+  height: 100vh;
 
-  display: grid;
-  place-items: center;
-
-  background-color: rgba(0, 0, 0, 0.275);
-}
-
-.layout--auth-popup {
-  background-color: blue;
-
-  width: 40rem;
-  height: 45rem;
+  overflow-y: scroll;
 }
 
 .layout--nav {
@@ -31,7 +14,6 @@
 
   display: flex;
   align-items: center;
-  // justify-content: space-between;
   gap: 6rem;
 
   padding: 2rem 4rem;
