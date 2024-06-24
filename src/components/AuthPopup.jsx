@@ -26,7 +26,7 @@ const AuthPopup = ({ setAuthPopupActive, isSignupWindow, setBtnClicked }) => {
         <form
           className="auth-popup--window-form"
           onClick={onAuth}>
-          {isSignupWindow && (
+          {alternateWindow && (
             <input
               type="text"
               placeholder="Username"
@@ -40,7 +40,7 @@ const AuthPopup = ({ setAuthPopupActive, isSignupWindow, setBtnClicked }) => {
             type="password"
             placeholder="Password"
           />
-          {isSignupWindow && (
+          {alternateWindow && (
             <>
               <button type="submit">Signup</button>
               <div className="auth-popup--change-window">
@@ -49,7 +49,7 @@ const AuthPopup = ({ setAuthPopupActive, isSignupWindow, setBtnClicked }) => {
               </div>
             </>
           )}
-          {!isSignupWindow && (
+          {!alternateWindow && (
             <>
               <button type="submit">Login</button>
               <div className="auth-popup--change-window">
