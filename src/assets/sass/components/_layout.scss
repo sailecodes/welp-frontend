@@ -2,8 +2,27 @@
 
 .layout {
   background-color: black;
+}
 
-  height: 100vh;
+.layout--auth {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+
+  display: grid;
+  place-items: center;
+
+  background-color: rgba(0, 0, 0, 0.275);
+}
+
+.layout--auth-popup {
+  background-color: blue;
+
+  width: 40rem;
+  height: 45rem;
 }
 
 .layout--nav {
@@ -12,8 +31,8 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  // justify-content: space-between;
+  gap: 6rem;
 
   padding: 2rem 4rem;
 
@@ -30,11 +49,13 @@
 .layout--nav-search {
   display: flex;
   align-items: center;
+
+  margin-left: auto;
 }
 
 .layout--nav-search-input {
   width: 40rem;
-  height: 5rem;
+  height: 4.5rem;
 
   font-size: 1.6rem;
 
@@ -47,11 +68,17 @@
   place-items: center;
 
   width: 6rem;
-  height: 5rem;
+  height: 4.5rem;
 
-  background-color: red;
+  background-color: vars.$color-red;
 
   border-radius: 0 8px 8px 0;
+
+  transition: background-color 0.4s;
+}
+
+.layout--nav-search-btn:hover {
+  background-color: vars.$color-red-hover;
 }
 
 .layout--nav-search-btn svg {
@@ -70,21 +97,20 @@
 .layout--btns-signup {
   color: white;
 
-  height: 5rem;
+  min-width: fit-content;
+  height: 4.5rem;
 
   font-size: 1.6rem;
   font-weight: 600;
 
   padding: 0 2rem;
   border-radius: 8px;
+
+  transition: background-color 0.4s;
 }
 
 .layout--btns-login {
-  min-width: 8rem;
-
   border: 2px solid white;
-
-  transition: background-color 0.3s;
 }
 
 .layout--btns-login:hover {
@@ -92,9 +118,11 @@
 }
 
 .layout--btns-signup {
-  background-color: red;
+  background-color: vars.$color-red;
+}
 
-  min-width: 9rem;
+.layout--btns-signup:hover {
+  background-color: vars.$color-red-hover;
 }
 
 .layout--footer {

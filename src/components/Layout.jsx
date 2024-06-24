@@ -8,10 +8,19 @@ const Layout = () => {
 
   return (
     <div className="layout">
+      <div className="layout--auth">
+        <div className="layout--auth-popup"></div>
+      </div>
       <nav className="layout--nav">
         <p className="layout--nav-logo">welp.</p>
-        <form className="layout--nav-search" onSubmit={onSearch}>
-          <input className="layout--nav-search-input" type="text" placeholder="Search for restaurants..." />
+        <form
+          className="layout--nav-search"
+          onSubmit={onSearch}>
+          <input
+            className="layout--nav-search-input"
+            type="text"
+            placeholder="Search for restaurants..."
+          />
           <button className="layout--nav-search-btn">
             <CiSearch />
           </button>
@@ -22,7 +31,7 @@ const Layout = () => {
         </div>
       </nav>
       <Outlet />
-      <section className="layout--footer">Created by Elias IV Roman, inspired by Yelp.</section>
+      <section className="layout--footer">Created by Elias IV Roman. Inspired by Yelp.</section>
     </div>
   );
 };
