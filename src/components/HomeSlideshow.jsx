@@ -10,6 +10,8 @@ const HomeSlideshow = () => {
       </div>
       <div className="home-slideshow--markers">
         <div className="home-slideshow--markers-marker" />
+        <div className="home-slideshow--markers-marker" />
+        <div className="home-slideshow--markers-marker" />
       </div>
     </section>
   );

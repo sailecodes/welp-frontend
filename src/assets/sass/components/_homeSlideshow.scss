@@ -1,4 +1,7 @@
 .home-slideshow {
+  position: relative;
+  z-index: 49;
+
   background-color: darkblue;
 
   height: 60rem;
@@ -11,4 +14,24 @@
 }
 
 .home-slideshow--markers {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: purple;
+
+  width: 115rem;
+}
+
+.home-slideshow--markers-marker {
+  width: 1.2rem;
+  height: 8rem;
+
+  border-radius: 10px;
+  border: 1px solid red;
 }
