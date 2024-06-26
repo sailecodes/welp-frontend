@@ -62,8 +62,8 @@ const Layout = () => {
             </button>
           </div>
         </nav>
-        <Outlet context={setAuthPopupActive} />
-        <section className="layout--footer">Created by Elias IV Roman. Inspired by Yelp.</section>
+        <Outlet context={{ setAuthPopupActive, onAuthBtnClicked }} />
+        <section className="layout--footer">Created by Elias IV Roman, inspired by Yelp.</section>
       </div>
     </>
   );
